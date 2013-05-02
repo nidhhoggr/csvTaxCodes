@@ -1,0 +1,27 @@
+#!/usr/bin/env php
+<?php
+require_once(dirname(__FILE__) . '/bootstrap.php');
+
+error_reporting(0);
+
+$options = getopt('a:');
+
+$account_type = $options['a'];
+
+if(!empty($account_type)) {
+
+    $cp = new CsvParser($account_type . '.csv');
+
+    $cm = new CsvMapping($account_type);
+
+    $records = $cp->processCsv($cm);
+
+    $ce = new CsvExport($records);
+
+    $ce->createFile($account_type . '-export.csv');
+}
+else {
+
+    echo "exa: ./csvtaxcode -a Checking\n";
+
+}
