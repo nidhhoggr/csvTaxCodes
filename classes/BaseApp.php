@@ -12,6 +12,11 @@ class BaseApp {
         return dirname(__FILE__) . '/../csv/';
     }
 
+    protected function getMappingDir() {
+
+        return dirname(__FILE__) . '/../mapping/';
+    }
+
     protected function getCsvSettings() {
 
         $csvSettings = array(
@@ -21,22 +26,6 @@ class BaseApp {
         );
 
         return $csvSettings;
-    }
-
-    protected function getMapping() {
-
-        return array(
-            'Checking'=>array(
-                'taxCode_col'=>'taxCode',
-                'itemDesc_col'=>'item_desc',
-                'taxCode_map'=>array(
-                    '6850'=>array(
-                        'BLU*supraliminalso',
-                        'GITHUB.COM'
-                    )
-                )
-            )
-        );
     }
 
     protected function getTestMapping() {
