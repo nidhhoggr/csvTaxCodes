@@ -1,0 +1,4 @@
+taxCode_col: 'taxCode'
+itemDesc_col: 'item_desc'
+taxCode_map:
+  4100: ['INTEREST PAYMENT']

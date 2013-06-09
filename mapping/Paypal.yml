@@ -1,0 +1,4 @@
+taxCode_col: 'taxCode'
+itemDesc_col: 'Item Title'
+taxCode_map:
+  4050: ['Supra CSV Premium']
